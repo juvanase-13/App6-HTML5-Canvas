@@ -65,6 +65,44 @@ var a_canvas = document.getElementbyID("myCanvas"); // create variable "myCanvas
 }
 </style>
 
+<script> // drawing a rectangle
+	function draw_b() { // draws a rectangle
+		var a_canvas = document.getElementById("myCanvas"); // calls the canvas
+		var a_context = a_canvas.getContext("2d"); // displays the rectangle 
+		a_context.fillRect(10, 25, 150, 100); // specifies the coordinates, width, and height of the rectangle (x,y, width, height)
+		}
+	</script>
+
+	<script> // writing my name
+	function draw_text(){ // writes my name
+		var c = document.getElementById("myCanvas"); // calls the canvas
+		var ctx = c.getContext("2d"); //  displays my name in 
+		ctx.font = "25px Arial"; // sets the size/font parameters for name
+		ctx.fillText("Juvana Enchackal", 70, 160); // writes my name on the coordinates (x,y)
+		}
+	</script>
+
+	<script> // inserting an image
+	function draw_image(){
+		var image_canvas = document.getElementById("art"); //finds the element for image
+		var image_context = image_canvas.getContext("2d"); //2-D canvas
+		var image_flower = new Image();//creating  image
+		image_sunset.src="https://media.istockphoto.com/photos/beautiful-sunset-over-the-tropical-sea-picture-id1172427455?k=20&m=1172427455&s=612x612&w=0&h=tL1ig4N68zXv9wKgZ3_tOeVP1qV3zSfjjS_jbyeyGCA="; //image of sunset
+		image_sunset.onload = function(){ // onload image into canvas
+		image_context.drawImage(image_sunset, 250, 100); //  dimensions/coordinates
+		};
+	}
+	</script>
+
+	<script> // section of code for clearing the canvas
+	function clear_canvas(){ // function that clears the canvas 	
+		var a_canvas = document.getElementById("myCanvas"); // command calls the canvas
+		a_canvas.width = a_canvas.width; // command clears the entire box 
+		}
+			
+</script>
+
+
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
