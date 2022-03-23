@@ -85,8 +85,8 @@ var a_canvas = document.getElementbyID("myCanvas"); // create variable "myCanvas
 		
 
 	<script> //inserting image
-		
-	function myCanvas() {
+		<img id="sunset" src="https://media.istockphoto.com/photos/beautiful-sunset-over-the-tropical-sea-picture-id1172427455?k=20&m=1172427455&s=612x612&w=0&h=tL1ig4N68zXv9wKgZ3_tOeVP1qV3zSfjjS_jbyeyGCA=" alt="sunset" width="300" height="200">	
+		function myCanvas() {
   var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
   var img = document.getElementById("sunset");
@@ -104,7 +104,6 @@ var a_canvas = document.getElementbyID("myCanvas"); // create variable "myCanvas
 
 
 <body>
-<img id="sunset" src="https://media.istockphoto.com/photos/beautiful-sunset-over-the-tropical-sea-picture-id1172427455?k=20&m=1172427455&s=612x612&w=0&h=tL1ig4N68zXv9wKgZ3_tOeVP1qV3zSfjjS_jbyeyGCA=" alt="sunset" width="300" height="200">	
 	
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
@@ -113,12 +112,11 @@ var a_canvas = document.getElementbyID("myCanvas"); // create variable "myCanvas
 <div id="content" class="w3-container">
 	<p>Draw on the Canvas!</p> <!--title of canvas-->
 	
-	<canvas id="myCanvas" width="300" height="200" style="border:1px solid #000000;"> <!--black border around rectangle, text, and image-->
+	<canvas id="myCanvas" width="300" height="200" style="border:1px solid #000000;"> <!--black border around rectangle-->
 </canvas> 
 	
 </div>
 	
-
 	<a onclick="draw_b();" class="w3-btn w3-black"> Draw a Rectangle </a> <!--button draws a rectangle-->
 	
 	</div>
@@ -127,7 +125,7 @@ var a_canvas = document.getElementbyID("myCanvas"); // create variable "myCanvas
 
 	</div>
 
-	<a onclick="draw_image();" class="w3-btn w3-black"> Insert Image </a> <!--button displays image -->
+	<a onclick="myCanvas();" class="w3-btn w3-black"> Insert Image </a> <!--button displays image -->
 
 	</div>
 
