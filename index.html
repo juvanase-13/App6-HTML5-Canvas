@@ -73,7 +73,7 @@ var a_canvas = document.getElementByID("myCanvas"); // create variable "myCanvas
 	<script> // writing my name
 	function draw_text(){ // writes my name
 		var c = document.getElementById("myCanvas"); // calls the canvas
-		var ctx = c.getContext("2d"); //  displays my name in 
+		var ctx = c.getContext("2d"); //  displays my name in 2D
 		ctx.font = "25px Arial"; // sets the size/font parameters for name
 		ctx.fillText("Juvana Enchackal", 70, 160); // writes my name on the coordinates (x,y)
 		}
@@ -85,10 +85,10 @@ var a_canvas = document.getElementByID("myCanvas"); // create variable "myCanvas
 	<script> //inserting image
 		<img id="sunset" src="https://media.istockphoto.com/photos/beautiful-sunset-over-the-tropical-sea-picture-id1172427455?k=20&m=1172427455&s=612x612&w=0&h=tL1ig4N68zXv9wKgZ3_tOeVP1qV3zSfjjS_jbyeyGCA=" alt="sunset" width="300" height="200">	
 		function myCanvas() {
-  var c = document.getElementById("myCanvas");
-  var ctx = c.getContext("2d");
+  var c = document.getElementById("myCanvas"); // calls canvas
+  var ctx = c.getContext("2d"); // displays image in 2D
   var img = document.getElementById("sunset");
-  ctx.drawImage(img,50,150);
+  ctx.drawImage(sunset,50,150);
 		
 	</script>
 
