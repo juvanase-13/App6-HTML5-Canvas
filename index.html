@@ -83,12 +83,15 @@ var a_canvas = document.getElementByID("myCanvas"); // create variable "myCanvas
 		
 
 	<script> //inserting image
-		<img id="sunset" src="https://media.istockphoto.com/photos/beautiful-sunset-over-the-tropical-sea-picture-id1172427455?k=20&m=1172427455&s=612x612&w=0&h=tL1ig4N68zXv9wKgZ3_tOeVP1qV3zSfjjS_jbyeyGCA=" alt="sunset" width="300" height="200">	
-		function myCanvas() {
-  var c = document.getElementById("myCanvas"); // calls canvas
-  var ctx = c.getContext("2d"); // displays image in 2D
-  var img = document.getElementById("sunset");
-  ctx.drawImage(img,50,150);
+		function draw_image(){ // function inserts the image on canvas
+		var a_canvas = document.getElementById("myCanvas"); // command calls the canvas
+		var a_context = a_canvas.getContext("2d"); // command displays the image in 2D
+		var img = new Image(); // command creates a variable "img" that is set equal to the new variable for image
+		img.src = "sunset.png"; // command stores image under the src variable
+		img.onload = function() { // command loads the image onto canvas
+			a_context.drawImage(img, 200,5,70,70); // command specifies the location of the image on canvas (x, y, width, height)
+			};
+	}
 		
 	</script>
 
@@ -123,7 +126,7 @@ var a_canvas = document.getElementByID("myCanvas"); // create variable "myCanvas
 
 	</div>
 
-	<a onclick="myCanvas();" class="w3-btn w3-black"> Insert Image </a> <!--button displays image -->
+	<a onclick="draw_image();" class="w3-btn w3-black"> Insert Image </a> <!--button displays image -->
 
 	</div>
 
